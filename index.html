@@ -9,44 +9,49 @@
 </head>
 
 <body>
-    <p id="name"></p>
-    <p id="city"></p>
-    <p id="pnumber"></p>
+    <p id="name">abc</p>
+    <p id="city">xyz</p>
+    <p id="pnumber">tyu</p>
     <p id="birth"></p>
     <p id="anHien" style="display: none;">The nay se hien khi nhan nut</p>
     <button id="hien">Hiện</button>
     <script>
         var theP1 = document.getElementById("name");
+        // theP1.id = "name1";
+        // console.log(theP1.id);
+        theP1.style = "background-color: purple;";
         var theP2 = document.getElementById("city");
         var theP3 = document.getElementById("pnumber");
         var theP4 = document.getElementById("birth");
         var theP5 = document.getElementById("anHien");
+        theP5.style.backgroundColor = "red";
+        theP3.style = "background-color: violent;";
 
-        alert("Chào mừng bạn đến với ứng dụng JavaScript đầu tiên");
+        // alert("Chào mừng bạn đến với ứng dụng JavaScript đầu tiên");
 
-        var ten = prompt("Nhập tên của bạn: ");
-        var thanhPho = prompt("Nhập tên thành phố bạn đang sống: ");
-        var soDienThoai = prompt("Nhập số điện thoại của bạn: ");
+        // var ten = prompt("Nhập tên của bạn: ");
+        // var thanhPho = prompt("Nhập tên thành phố bạn đang sống: ");
+        // var soDienThoai = prompt("Nhập số điện thoại của bạn: ");
 
-        theP1.innerHTML = ten;
-        theP2.innerHTML = thanhPho;
-        theP3.innerHTML = soDienThoai;
+        theP1.append("abc");
+        // theP2.innerHTML = thanhPho;
+        // theP3.innerHTML = soDienThoai;
 
-        var yeuCauNhap = true;
-        while(yeuCauNhap) {
-            var namSinh = prompt("Nhập năm sinh của bạn: ");
-            var now = new Date().getFullYear();
-            if(namSinh > now) {
-                alert("Bạn đừng có điêu, năm nay là năm " + now);
-            } else {
-                theP4.innerHTML = "<b>" + (now - namSinh) + "</b>";
-                yeuCauNhap = false;
-            }
-        }
+        // var yeuCauNhap = true;
+        // while(yeuCauNhap) {
+        //     var namSinh = prompt("Nhập năm sinh của bạn: ");
+        //     var now = new Date().getFullYear();
+        //     if(namSinh > now) {
+        //         alert("Bạn đừng có điêu, năm nay là năm " + now);
+        //     } else {
+        //         theP4.innerHTML = "<b>" + (now - namSinh) + "</b>";
+        //         yeuCauNhap = false;
+        //     }
+        // }
 
         document.getElementById("hien").onclick = hienAn;
         function hienAn() {
-            theP5.style = "display:block;"
+            theP5.style.display = "block";
         }
     </script>
 </body>
